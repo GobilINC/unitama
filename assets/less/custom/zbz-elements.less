@@ -1,0 +1,722 @@
+/*-------------------------------------------------------------------
+
+Zbz! Common styles 
+
+[Table of contents]
+
+1. Note
+2. Spacers
+3. Transitions
+4. Ghost Labels
+5. Countable boxes
+6. Feature boxes
+7. Person
+8. Pricing tables
+9. Fottnote
+10. Ribbon
+11. Map
+12. Pricetag
+13. Feedback form
+14. Uppercase headers
+
+-------------------------------------------------------------------*/
+
+
+/* Note */
+
+.zbz-note-right {
+	border-left: 1px solid @zbz-color-hr;
+	padding-left: 30px;
+	*:first-child {
+		margin-top: 0px;
+	}
+}
+
+
+/* Spacers */
+
+.zbz-spacer-10 { height: 10px; }
+.zbz-spacer-20 { height: 20px; }
+.zbz-spacer-30 { height: 30px; }
+.zbz-spacer-40 { height: 40px; }
+.zbz-spacer-50 { height: 50px; }
+.zbz-spacer-60 { height: 60px; }
+.zbz-spacer-70 { height: 70px; }
+.zbz-spacer-80 { height: 80px; }
+.zbz-spacer-90 { height: 90px; }
+.zbz-spacer-100 { height: 100px; }
+
+/* Transition */
+
+.zbz-transition {
+	.transition(0.5s all linear);
+}
+.zbz-transition-fast {
+	.transition(0.15s all linear);
+}
+
+/* Labels */
+
+.zbz-ghost-label {
+	border: 1px solid @zbz-color-brand;
+	color: @zbz-color-brand;
+	display: inline-block;
+	padding: 2px 5px;
+	text-transform: uppercase;
+	font-size: @font-size-base * 0.7;
+	line-height: 1.3em;
+	font-weight: 400;
+	border-radius: 3px;
+}
+
+/* Countable */
+
+.zbz-countable {
+	text-align: center;
+	
+	.zbz-feature-side & {
+		text-align: left;
+	}
+	
+	.number {
+		font-weight: 700;
+		font-size: @font-size-base*4;
+		small {
+			font-weight: 500;
+			font-size: @font-size-base*2;
+		}
+	}
+	
+	.title {
+	}
+}
+
+
+/* Zbz Video Box */
+.zbz-video-box {
+	margin: @line-height-computed;
+}
+
+/* Features */
+
+.zbz-feature-side {
+	margin-top: @line-height-computed;
+	margin-bottom: @line-height-computed;
+	&:before,&:after {
+		content: ' ';
+		display: table;
+		height: 0px;
+	}
+	
+	> .fa {
+		float: left;
+	}
+
+	> .zbz-circle {
+		float: left;
+		.fa {
+			float: none;
+		}
+	}
+	
+	.zbz-description {
+		margin-left: 35px;
+		p {
+			margin-top: 0;
+		}
+		p:last-child {
+			margin-bottom: 0px;
+		}
+	}
+	
+	.zbz-circle+.zbz-description {
+		margin-left: 45px;
+	}
+
+
+	.zbz-generate-feature-margins(xs, left, 10);
+	
+	@media (min-width: @screen-sm-min) {
+		.zbz-generate-feature-margins(sm, left, 10);
+	}
+	
+	@media (min-width: @screen-md-min) {
+		.zbz-generate-feature-margins(md, left, 10);
+	}
+	
+	@media (min-width: @screen-lg-min) {
+		.zbz-generate-feature-margins(lg, left, 10);
+	}
+	
+
+	&.right {
+		> .zbz-circle {
+			float: right;
+		}
+		
+		.zbz-description {
+			margin-left: 0px;
+			margin-right: 35px;
+		}
+		
+		.zbz-circle+.zbz-description {
+			margin-left: 0px;
+			margin-right: 45px;
+		}
+	
+	
+		.zbz-generate-feature-margins(xs, right, 10);
+		
+		@media (min-width: @screen-sm-min) {
+			.zbz-generate-feature-margins(sm, right, 10);
+		}
+		
+		@media (min-width: @screen-md-min) {
+			.zbz-generate-feature-margins(md, right, 10);
+		}
+		
+		@media (min-width: @screen-lg-min) {
+			.zbz-generate-feature-margins(lg, right, 10);
+		}
+	}
+
+	h1, h2, h3 {
+		margin-top: 0px;
+	}
+	
+	@media (max-width: @screen-xs-max) {
+		&.zbz-xs-only-above {
+			> .zbz-circle, > .fa {
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			
+			.zbz-circle+.zbz-description, .fa+.zbz-description {
+				margin: 20px 0px;
+			}
+		}
+	}
+	
+	@media (min-width: @screen-sm-min) {
+		&.zbz-sm-only-above {
+			> .zbz-circle, > .fa {
+				float: none;
+			}
+			
+			.zbz-circle+.zbz-description, .fa+.zbz-description {
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+		}
+	}
+	
+	@media (min-width: @screen-md-min) {
+		&.zbz-md-only-above {
+			> .zbz-circle, > .fa {
+				float: none;
+			}
+			
+			.zbz-circle+.zbz-description, .fa+.zbz-description {
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+		}
+	}
+	
+	@media (min-width: @screen-lg-min) {
+		&.zbz-lg-only-above {
+			> .zbz-circle, > .fa {
+				float: none;
+			}
+			
+			.zbz-circle+.zbz-description, .fa+.zbz-description {
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+		}
+	}
+}
+
+// Feature box with above circle
+.zbz-feature-above {
+	text-align: center;
+	margin: 20px 0px;
+	.zbz-description {
+		margin-top: 20px;
+	}
+}
+
+// Feature box boxed style
+
+.zbz-feature-box {
+	text-align: center; 
+	padding: 20px 40px;
+	height: 100%;
+	
+	.zbz-description {
+		text-align: left;
+	}
+	
+	&:before {
+		content: ' ';
+		background-color: @zbz-color-feature-bg;
+		position: absolute;
+		top: 70px;
+		left: 15px;
+		right: 15px;
+		bottom: 0px;
+		z-index: -1;
+	}
+}
+
+// Zbz circle stlye
+
+.zbz-circle {
+	border-radius: 500px;
+	background-color: @zbz-color-feature-bg;
+	color: @zbz-color-feature-color;
+	display: inline-block;
+	text-align: center;
+	line-height: 1em;
+	overflow: hidden;
+	
+	&.zbz-countour {
+		background-color: transparent;
+		border: 1px solid @zbz-color-brand;
+		color: @zbz-color-brand;
+	}
+	
+	a& {
+		background-color: @zbz-color-btn-default;
+		color: @zbz-color-btn-default-text;		
+		&:hover {
+			background-color: darken(@zbz-color-btn-primary, 10%);
+			color: @zbz-color-btn-primary-text;
+		}
+		
+		&.zbz-countour {
+			background-color: transparent;
+			border: 1px solid @zbz-color-btn-default;
+			color: @zbz-color-btn-default;
+			&:hover {
+				background-color: darken(@zbz-color-btn-primary, 10%);
+				border-color: darken(@zbz-color-btn-primary, 10%);
+				color: @zbz-color-btn-primary-text;
+			}
+
+		}
+	}
+	
+	.zbz-inner {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.zbz-inner-text {
+		margin: 0px 50px;
+	}
+	
+}
+
+// Styles for FontAwesome icons inside feature boxes
+
+.zbz-circle, .zbz-feature-above, .zbz-feature-side {
+	.fa {
+		width: 1.1428571428571429em;
+		height: 1.1428571428571429em;
+		position: relative;
+		top: 0.072em;
+		text-align: center;
+	}
+}
+
+.zbz-circle {
+	.fa {
+		margin: 6px;
+	}
+}
+
+// Generates different sizes of zbz-circles
+
+.zbz-generate-feature-sizes(xs, 10);
+
+@media (min-width: @screen-sm-min) {
+	.zbz-generate-feature-sizes(sm, 10);
+}
+
+@media (min-width: @screen-md-min) {
+	.zbz-generate-feature-sizes(md, 10);
+}
+
+@media (min-width: @screen-lg-min) {
+	.zbz-generate-feature-sizes(lg, 10);
+}
+
+// Styles for images inside zbz-circles
+
+.zbz-circle .image {
+	width: 150%;
+	margin-left: -25%;
+}
+
+// Styles for image covers inside circles
+
+.zbz-circle .zbz-image-cover {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 500px;
+	
+	.zbz-details {
+		display: block;
+		position: absolute;
+		top: 0px;
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+		width: 100%;
+		background-color: @zbz-color-brand;
+		color: @zbz-color-feature-color;
+		opacity: 0;
+		font-size: 30px;
+		.transition(opacity 0.2s linear);
+		text-align: center;
+		padding-top: 50%;
+		line-height: 0px;
+		border-radius: 500px;
+	}
+	
+	&:hover {
+		.zbz-details {
+			opacity: 0.8;
+		}
+	}
+}
+
+/* Person */
+
+.zbz-person {
+	img {
+		max-width: 100%;
+		border: 1px solid rgba(0,0,0,0.02);
+	}
+	
+	h3 {
+		margin-top: 20px;
+		margin-bottom: 5px;
+	}
+	
+	.position {
+		font-size: @font-size-base * 1.2;
+		.text-muted();
+	}
+	
+	p {
+		padding: 20px 0px 0px;
+		margin: 15px 0px;
+		border-top: 1px solid @zbz-color-hr;
+		.small();
+	}
+}
+
+
+/* Pricing tables */
+
+// Container for boxes
+.zbz-pricing-table {
+	margin-top: -15px;
+	margin-bottom: -15px;
+}
+
+// Pricing box
+.zbz-pricing-box {
+	padding: 1px 15px 0px 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	position: relative;
+	color: @zbz-color-pricing-text;
+	
+	// Inner div
+	> div {
+		background-color: @zbz-color-pricing-bg;
+	}
+	
+	
+	// Headers
+	h2, h3, h4 {
+		padding: 20px 20px;
+		margin: 0px;
+		text-align: center;
+		position: relative;
+		color: @zbz-color-pricing-header;
+		small {
+			font-weight: 300;
+			font-size: @font-size-base * 0.9;
+			margin-top: 5px;
+		}		
+	}
+	
+	// List of options
+	ul {
+		list-style-type: none;
+		padding: 10px 20px 100px;
+		margin: 0px 0px;
+		li {
+			border-bottom: 1px dotted @zbz-color-pricing-list-border;
+			padding: 10px 0px;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+	
+	// Price
+	.price {
+		padding: 10px 20px 20px;
+		background-color: @zbz-color-pricing-price-bg;
+		color: @zbz-color-pricing-price-text;
+		text-align: center;
+		position: relative;
+		
+		&.arrowed {
+		
+			&:after, &:before {
+				display: block;
+				content: ' ';
+				position: absolute;
+				height: 20px;
+				width: 50%;
+				background-color: @zbz-color-pricing-price-bg;
+				right: 0px;
+				bottom: -20px;
+				.transform-origin(left bottom);
+				.skew(0deg; -7deg);
+			}
+			&:before {
+				right: auto;
+				left: 0px;
+				bottom: -20px;
+				.transform-origin(right top);
+				.skew(0deg; 7deg);
+			}
+		}
+
+		.value {
+			font-size: @font-size-base * 2.5;
+			font-weight: 700;
+			small {
+				font-size: @font-size-base;
+				font-weight: 300;
+			}
+		}
+		
+	}
+	
+	// Action
+	.action {
+		padding: 20px 20px;
+		background-color: @zbz-color-pricing-action-bg;
+		position: absolute;
+		bottom: 0px;
+		left: 15px;
+		right: 15px;
+	}
+	
+	// Featured styles
+	&.featured {
+	
+		.zbz-ribbon {
+			right: 14px;
+		}
+	
+		.price {
+			background-color: @zbz-color-pricing-featured-price-bg;
+			color: @zbz-color-pricing-featured-price-text;
+		}
+	}
+}
+
+/* Footnote */
+
+.zbz-footnote {
+	margin-top: 30px;
+	font-size: @font-size-small;
+	color: @zbz-color-text-muted;
+}
+
+
+/* Ribbon */
+
+.zbz-ribbon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	overflow: hidden;
+	height: 105px;
+	width: 105px;
+	// text in ribbon
+	span {
+		position: relative;
+		display: block;
+		z-index: 2;
+		.rotate(45deg);
+		.transform-origin(left top);
+		background-color: @zbz-color-brand-opposite;
+		top: -30px;
+		right: -30px;
+		width: 150px;
+		text-align: center;
+		font-weight: 900;
+		text-transform: uppercase;
+		font-size: 9px;
+		line-height: 10px;
+		color: #FFF;
+		text-shadow: 0px -1px 0px rgba(0,0,0,0.1);
+		padding: 5px 40px;
+		.box-shadow(0px 1px 0px rgba(0,0,0,0.1));
+	}
+}
+
+/* Map */
+
+.zbz-map {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	.transition(0.3s height linear);
+	margin: 0px 0px 50px;
+	
+	// Expand button
+	.zbz-expand-btn {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		background-color: rgba(125,125,125,0.5);
+		z-index: 20;
+		text-align: center;
+		font-size: @font-size-base*2;
+		padding-top: 80px;
+		color: @zbz-color-white;
+		text-decoration: none;
+		.transition(0.3s background-color linear);
+		&:hover, &:active {
+			background-color: rgba(0,0,0,0.5);
+			.transition(0.3s background-color linear);
+		}
+	}
+	
+	// Map canvas
+	.zbz-map-canvas {
+		height: 450px;
+		margin-top: -125px;
+		.transition(0.3s margin linear);
+	}
+	
+	// Expanded view
+	&.expanded {
+		height: 450px;
+		.zbz-map-canvas {
+			margin-top: 0px;
+			.transition(0.3s margin linear);
+		}
+		.zbz-expand-btn {
+			display: none;
+		}
+	}
+}
+
+/* Pricetag */
+
+.zbz-pricetag {
+	width: 200px;
+	text-align: left;
+	
+	.price {
+		color: @zbz-color-brand;
+		font-size: @font-size-base * 4;
+		font-weight: 900;
+	}
+	
+	.note {
+		font-size: @font-size-base * 1.5;
+		color: @zbz-color-text-muted;
+	}
+	
+	&.circled {
+		text-align: center;
+		border-radius: 500px;
+		background-color: @zbz-color-brand;
+		padding: 30px;
+		width: 200px;
+		.price, .note {
+			color: @zbz-color-brand-opposite;
+		}
+	}
+}
+
+/* Feedback form */
+
+.zbz-feedback-form {
+	.btn.pull-left {
+		margin-right: 20px;
+	}
+	.zbz-result-message {
+		display: table;
+		min-height: 50px;
+		span {
+			display: table-cell;
+			min-height: 50px;
+			vertical-align: middle;
+		}
+	}
+	
+	&.error {
+		.zbz-result-message {
+			color: @zbz-color-btn-danger;
+		}
+	}
+	
+	&.success {
+		.zbz-result-message {
+			color: @zbz-color-btn-success;
+		}
+	}
+}
+
+
+/* Uppercase headers */
+
+.zbz-caps {
+	text-transform: uppercase;
+	font-weight: 600;
+	
+	h2& {
+		font-weight: 900;
+		font-size: 35px;
+		line-height: 35px;
+		margin: 0px;
+	}
+	h3& {
+		font-size: 30px;
+	}
+	h5& {
+		font-size: @font-size-small;
+	}
+	
+	h5& {
+		font-size: @font-size-small*0.9;
+	}
+	p& {
+		font-weight: 400;
+		font-size: 15px;
+		margin: 0px;
+	}
+}
+

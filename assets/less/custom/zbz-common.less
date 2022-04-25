@@ -1,0 +1,346 @@
+/*-------------------------------------------------------------------
+
+Zbz! Common styles 
+
+[Table of contents]
+
+1. Slide keeper
+2. Slides
+3. Ghost buttons
+4. Navigation
+5. Helpers
+
+-------------------------------------------------------------------*/
+
+
+// Slide keeper 
+.zbz-slide-keeper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	
+	@media (max-width: @screen-sm-max) {
+		position: relative;
+	}
+}
+
+// Slide 
+.zbz-slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	.zbz-slide-inner {
+		display: table;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.zbz-slide-content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	// Styles for smaller screens
+	@media (max-width: @screen-sm-max) {
+		position: relative;
+		padding: 60px 0px;
+		visibility: visible !important;
+		border-top: 5px solid @zbz-color-hr;
+		
+		.zbz-slide-inner {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+		
+		.zbz-slide-content {
+			display: block;
+			vertical-align: middle;
+		}
+		
+		@media (max-width: @screen-sm-max) {
+			h1 { font-size: floor((@font-size-h1*0.8)); }
+			h2 { font-size: floor((@font-size-h2*0.8)); }
+			h3 { font-size: floor((@font-size-h3*0.8)); }
+		}
+	}
+}
+
+
+
+/* Ghost buttons */
+
+// Default
+.btn-default.btn-ghost {
+  .ghost-button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+// Primary
+.btn-primary.btn-ghost {
+  .ghost-button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Success
+.btn-success.btn-ghost {
+  .ghost-button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info
+.btn-info.btn-ghost {
+  .ghost-button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+// Warning
+.btn-warning.btn-ghost {
+  .ghost-button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger
+.btn-danger.btn-ghost {
+  .ghost-button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+
+/* Scale down font sizes a bit */
+
+.zbz-side-nav {
+	list-style-type: none;
+	right: 20px;
+	height: 100%;
+	position: fixed;
+	z-index: 1000;
+	display: table;
+	
+	.zbz-expand-nav {
+		display: none;
+		font-size: 25px;
+		background-color: @zbz-color-nav-pill-bg;
+		color: @zbz-color-nav-text;
+		padding: 7px;
+		width: 50px;
+		height: 50px;
+		border-radius: 100px;
+		text-align: center;
+		z-index: 1001;
+		
+		&.active {
+			background-color: @zbz-color-brand;
+			color: @zbz-color-feature-color;
+		}
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		text-align: right;
+		display: table-cell;
+		vertical-align: middle;
+		li {
+			a {
+				display: block;
+				font-size: 10px;
+				font-weight: 500;
+				text-transform: uppercase;
+				padding: 3px 0px;
+				color: @zbz-color-nav-text;
+				// .transition(0.2s color linear);
+				span {
+					background-color: @zbz-color-nav-pill-bg;
+					padding: 2px 7px;
+					border-radius: 20px;
+					opacity: 0;
+					.transition(0.2s opacity linear);
+				}
+				
+				&:after {
+					content: ' ';
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					background-color: rgba(0,0,0,0);
+					border: 1px solid @zbz-color-nav-bullet-border;
+					border-radius: 10px;
+					margin-left: 10px;
+					.transition(0.2s background-color linear);
+				}
+				
+				&.active {
+					&:after {
+						background-color: @zbz-color-nav-bullet-bg;
+					}
+				}
+				
+				&:hover {
+					span {
+						opacity: 1;
+						.transition(0.5s opacity linear);
+					}
+					
+					color: @zbz-color-nav-text;
+					text-decoration: none;
+					&:after {
+						background-color: @zbz-color-nav-bullet-bg;
+					}
+				}
+			}
+			
+		}
+	}
+	
+	@media (max-width: @screen-sm-max) {
+		display: block;
+		right: 0px;
+		width: auto;
+		height: auto;
+	
+		.zbz-expand-nav {
+			display: block;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			
+		}
+
+		ul {
+			text-align: left;
+			display: block;
+			position: fixed;
+			right: 15px;
+			top: 95px;
+			background-color: @zbz-color-nav-pill-bg;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			.translate(0, -100%);
+			.transition-transform(0.3s ease-in-out);
+			
+			
+			&.expanded {
+				display: block;
+				.translate(0, 0%);
+				.transition-transform(0.3s ease-in-out);
+			}
+
+			li {
+				a {
+					display: block;
+					clear: left;
+					white-space: nowrap;
+					text-transform: none;
+					padding: 0px;
+					border-bottom: 1px solid rgba(255,255,255,0.1);
+					span {
+						opacity: 1;
+						padding: 15px 20px;
+						border-radius: 0px;
+						display: block;
+						font-size: 14px;
+						line-height: 20px;
+						background-color: transparent;
+					}
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Put element on top layer (over the moving circles) 
+.zbz-on-top {
+	position: relative;
+	z-index: 100;
+}
+
+// Curtain to tint background
+.tint-curtain {
+	background-color: @zbz-color-curtain;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+// Curtain completely cover the entire page
+.global-curtain {
+	background-color: @zbz-color-glogal-curtain;
+	position: fixed;
+	z-index: 1200;
+	width: 100%;
+	height: 100%;
+}
+
+// Backround div
+.zbz-bg-cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+// Fit image in box
+.zbz-image-fit {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.zbz-image-fit-h-100 {
+	max-width: 100%;
+	max-height: 100px;
+}
+
+.zbz-image-fit-h-200 {
+	max-width: 100%;
+	max-height: 200px;
+}
+
+.zbz-image-fit-h-300 {
+	max-width: 100%;
+	max-height: 300px;
+}
+
+.zbz-image-fit-h-400 {
+	max-width: 100%;
+	max-height: 400px;
+}
+
+.zbz-image-fit-h-500 {
+	max-width: 100%;
+	max-height: 500px;
+}
+
+// Adds extra margins
+.zbz-outer-space {
+	margin: 70px 0px;
+}
+
+// Left side image
+.zbz-left-side-img {
+	position: absolute;
+	z-index: 0;
+	bottom: 0px;
+	left: 63%;
+	height: 100%;
+}
+
+.zbz-left-side-img-2 {
+	position: absolute;
+	z-index: 0;
+	bottom: 0px;
+	left: 55%;
+	height: 95%;
+}
+
+
+// Content box
+.zbz-content-box {
+	padding: 30px 0px;
+	margin: 30px 0px 0px;
+}

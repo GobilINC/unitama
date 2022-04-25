@@ -1,0 +1,78 @@
+/*-------------------------------------------------------------------
+
+Zbz! Mixins 
+
+[Table of contents]
+
+1. Generator of feature circle sizes
+2. Generator for margins of feature box
+3. Ghost buttons generator
+
+-------------------------------------------------------------------*/
+
+// Ge
+.zbz-generate-feature-sizes(@prefix, @n, @i: 1) when (@i =< @n) {
+	.zbz-@{prefix}-@{i}x {
+		&.zbz-circle, &>.zbz-circle { width: unit(30*@i, px); height: unit(30*@i, px); }
+		&>.zbz-circle .fa, >.fa { font-size: unit(15*@i, px); }
+		&>.zbz-circle .fa, &.zbz-circle .fa { margin: unit((1.2857142857142858-1.1428571428571429)*3, em) auto; }
+	}
+	
+	.zbz-generate-feature-sizes(@prefix, @n, (@i + 1));
+}
+
+.zbz-generate-feature-margins(@prefix, @side, @n, @i: 1) when (@i =< @n) {
+	&.zbz-@{prefix}-@{i}x {
+		.zbz-description {
+			margin-@{side}: unit(15*@i+20, px);
+		}
+		.zbz-circle+.zbz-description {
+			margin-@{side}: unit(30*@i+20, px);
+		}
+	}
+	
+	.zbz-generate-feature-margins(@prefix, @side, @n, (@i + 1));
+}
+
+
+
+
+// Ghost Button variants
+// -------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+.ghost-button-variant(@color; @background; @border) {
+  color: @background;
+  background-color: rgba(0,0,0,0);
+  border-color: @background;
+  overflow: hidden;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @color;
+    background-color: @border;
+        border-color: @border;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+    top: 0px;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+}

@@ -1,0 +1,847 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Zbz! Splash — Template Documentation</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="stylesheet" href="assets/css/zbz.css" />
+	<!-- FontAwesome -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">	
+	<script src="assets/js/jquery.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+</head>
+<body data-spy="scroll" data-target="#tableOfContents">
+	<div class="navigation" id="tableOfContents">
+		<img src="assets/images/zbz-logo.png" width="96" height="96" alt="" class="logo" />
+		<ul class="nav">
+			<li><a href="#files">File Structure</a></li>
+			<li><a href="#first">First steps</a></li>
+			<li><a href="#bootstrap">Bootstrap 3</a></li>
+			<li><a href="#colors">Color schemes</a></li>
+			<li><a href="#slides">Creating slides</a></li>
+			<li><a href="#navigation">Navigation</a></li>
+			<li><a href="#feature">Feature boxes</a></li>
+			<li><a href="#responsive">Responsiveness</a></li>
+			<li><a href="#transitions">Transitions</a></li>
+			<li><a href="#edit-less">Editing styles (LESS)</a></li>
+			<li><a href="#contact-form">Contact form</a></li>
+			<li><a href="#credits">Credits</a></li>
+		</ul>
+	</div>
+	<div class="contents">
+		<div class="wrap">
+			<div class="row">
+				<div class="col-lg-8">
+					<h1>
+						Zbz! Splash<br/>
+						<small>Multipurpose one page template</small>
+					</h1>
+				</div>
+				<div class="col-lg-4">
+					<div class="credits">
+						<div class="row">
+							<small class="text-muted col-sm-4">Created:</small> <small class="col-sm-8">Aug 13, 2014</small><br/>
+							<small class="text-muted col-sm-4">Author:</small> <small class="col-sm-8">Sergey Serafimovich</small><br/>
+							<small class="text-muted col-sm-4">Email:</small> <small class="col-sm-8">slid@me.com</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<p class="lead wells">
+				Thank you for purchasing my template. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/slid">here</a>. Thanks so much!
+			</p>
+			<hr />
+			<div id="files" class="section">
+				<h2>File Structure</h2>
+				<p><strong>Zbz! Splash</strong> is a single-page template, however the package includes several different color schemes and usage examples. So let's get through the file structure first to make it clear where's what. Here is the basic file structure with descriptions:</p>
+				<table class="table">
+					<thead>
+						<tr>
+							<th colspan="4" style="width: 570px;">File</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4"><span class="glyphicon glyphicon-folder-open"> assets</span></td>
+							<td></td>
+						</tr>
+						
+						<!-- JS Files --> 
+						
+						<tr>
+							<td></td>
+							<td colspan="3"><span class="glyphicon glyphicon-folder-open"> js</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> modernizr.js</span></td>
+							<td class="text-muted">JavaScript library that detects HTML5 and CSS3 features in the user’s browser.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> bootstrap.min.js</span></td>
+							<td class="text-muted">Bootstrap JavaScript functions.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> jquery.js</span></td>
+							<td class="text-muted">jQuery is a Javascript library that greatly reduces the amount of code that you must write.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> fotorama.js</span></td>
+							<td class="text-muted">A simple, stunning, powerful jQuery gallery. Check <a href="http://fotorama.io">fotorama.io</a>.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> pace.js</span></td>
+							<td class="text-muted">Automatic page load progress bar.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> prettyEmbed.js</span></td>
+							<td class="text-muted">A script for a pretty embedding of YouTube videos.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> fitVids.js</span></td>
+							<td class="text-muted">A script that scales a video player to make it fit the container.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> skrollr.js</span></td>
+							<td class="text-muted">Skrollr is a full-fledged scrolling animation library.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> zbz-feedback.js</span></td>
+							<td class="text-muted">Script for processing contact form.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> zbz-splash-page.js</span></td>
+							<td class="text-muted">The main script that makes all the magic happen.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> zbz-utils.js</span></td>
+							<td class="text-muted">Custom helping functions.</td>
+						</tr>
+						
+						<!-- CSS files -->
+						
+						<tr>
+							<td></td>
+							<td colspan="3"><span class="glyphicon glyphicon-folder-open"> css</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> bootstrap-<span class="text-muted"><em>[color-scheme]</em></span>.css</span></td>
+							<td class="text-muted">Compiled stylesheet files for a specific color scheme.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> fotorama.css</span></td>
+							<td class="text-muted">Styles for Fotorama gallery plugin.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> pace.css</span></td>
+							<td class="text-muted">Styles for Pace.js preloader plugin.</td>
+						</tr>
+						
+						<!-- Less files -->
+						
+						<tr>
+							<td></td>
+							<td colspan="3"><span class="glyphicon glyphicon-folder-open"> less</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> bootstrap-<span class="text-muted"><em>[color-scheme]</em></span>.less</span></td>
+							<td class="text-muted">Main LESS files for compilation. They import all required Bootstrap LESS files and a specific color theme.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-file"> <span class="text-muted"><em>[other-files]</em></span>.less</span></td>
+							<td class="text-muted">Bootstrap 3 LESS files.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-folder-open"> custom</span></td>
+							<td></td>
+						</tr>						
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="glyphicon glyphicon-file"> animate.less</span></td>
+							<td class="text-muted">CSS animations from <a href="http://daneden.github.io/animate.css/">Animate.css</a>.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="glyphicon glyphicon-file"> zbz-color-scheme-<span class="text-muted"><em>[name]</em></span>.less</span></td>
+							<td class="text-muted">Contains color variables for template elements.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="glyphicon glyphicon-file"> zbz-common.less</span></td>
+							<td class="text-muted">Styles for basic elements of the page.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="glyphicon glyphicon-file"> zbz-elements.less</span></td>
+							<td class="text-muted">Styles for custom components.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="glyphicon glyphicon-file"> zbz-mixins.less</span></td>
+							<td class="text-muted">Custom less mixins.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="glyphicon glyphicon-file"> zbz-pallete.less</span></td>
+							<td class="text-muted">Less variables with Zbz! Color pallete.</td>
+						</tr>
+						
+						<!-- Php libs -->
+						
+						<tr>
+							<td></td>
+							<td colspan="3"><span class="glyphicon glyphicon-folder-open"> libs</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="2"><span class="glyphicon glyphicon-folder-close"> SwiftMailer</span></td>
+							<td class="text-muted">Swift Mailer PHP library.</td>
+						</tr>
+
+						<!-- Fonts --> 
+						
+						<tr>
+							<td></td>
+							<td colspan="3"><span class="glyphicon glyphicon-folder-close"> fonts</span></td>
+							<td class="text-muted">Bootstrap 3 Glyphions.</td>
+						</tr>
+						<tr>
+							<td colspan="4"><span class="glyphicon glyphicon-file"> mobile.html</span></td>
+							<td class="text-muted">Sample HTML template for mobile app.</td>
+						</tr>
+						<tr>
+							<td colspan="4"><span class="glyphicon glyphicon-file"> event.html</span></td>
+							<td class="text-muted">Sample HTML template for music event.</td>
+						</tr>
+						<tr>
+							<td colspan="4"><span class="glyphicon glyphicon-file"> photo.html</span></td>
+							<td class="text-muted">Sample HTML template a personal photographer portfolio.</td>
+						</tr>
+						<tr>
+							<td colspan="4"><span class="glyphicon glyphicon-file"> feedback.php</span></td>
+							<td class="text-muted">PHP script for handling contact form AJAX requests.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			
+			<div id="first" class="section">
+				<h2>Start building your website</h2>
+				<p>OK, you have all the files. What's next? Well, there are two ways. The first one is to upload those files to your hosting and make all changes via FTP. The second one is to build your website locally (read more about making changes in next chapters) and upload it to your hosting later.</p>
+				<div class="alert alert-info">It's completely up to you which way to choose, but my suggestion is to follow the second way if you are not a professional web developer.</div>
+				<p>Anyway, sooner or later, you'd have to upload those files to Document Root directory of your server (typically it's <strong>public_html</strong> or <strong>www</strong> folders). Which files should you upload? Here's the list:</p>
+				<ul>
+					<li><strong><em class="text-muted">[template-name]</em>.html</strong> — main HTML file of your choice from the root directory of the template. You should rename it to <strong>index.html</strong></li>
+					<li><strong>feedback.html</strong> — a script that handles your Contact Form requests.</li>
+					<li><strong>/assets/js/</strong> — complete the folder with JavaScript files.</li>
+					<li><strong>/assets/css/</strong> — complete folder with CSS files.</li>
+					<li><strong>/assets/libs/</strong> — complete folder with PHP libraries.</li>
+					<li><strong>/assets/fonts/</strong> — complete folder with font files.</li>
+				</ul>
+				<div class="alert alert-info">Optionally you can upload the <strong>/assets/less/</strong> folder if you are going to compile LESS files on your web server.</div>
+				<div class="alert alert-warning">It's very important to keep the file structure in the same way as it is. If you want to change it you should also change paths to these files in your HTML file in accordance with their new locations.</div>			
+			</div>
+			<div id="bootstrap" class="section">
+				<h2>Bootstrap 3 Framework</h2>
+				<p>This template is built upon a Bootstrap 3 — the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+				<p>You can use almost all framework features in your project with a few limitations:</p>
+				<ul>
+					<li>The layout of page doesn't have navigation bar in the top of the page.</li>
+					<li>The whole template consists of slides (screens of information) with the transitions between so you should keep it in mind and not overload each slide.</li>
+				</ul>
+				<div class="alert alert-info">If you are not familiar with the framework, please check <a href="http://getbootstrap.com"><strong>Bootstrap 3 website</strong></a> for the complete documentation.</div>
+			</div>
+			<div id="colors" class="section">
+				<h2>Color schemes</h2>
+				<p>OK, now is the fun part. This template includes several different color schemes, so you should know how to switch between them.</p>
+				<p>To change the color scheme for the entire page you have to link your page with the right CSS file. You can find those files in <strong>/assets/css/</strong> folder. Here is an example of how you should add them into your page:</p>
+<pre>
+&lt;head>
+   ...
+   <span style="color:#919191">&lt;!-- Include stylesheets with 'Dark' color scheme --></span>
+   &lt;link rel=<span style="color:#00a33f">"stylesheet"</span> href=<span style="color:#00a33f">"assets/css/bootstrap-dark.css"</span> />
+   ...
+&lt;/head>
+</pre>
+				<h3>Zbz! Pallete</h3>
+				<p>This template comes with a predefined set of handpicked colors. These colors are available as variables when you make changes in LESS files and as <code>class</code> names for a quick coloring of text, background and border of an element.</p>
+				<p>Use <code>.zbz-color-*</code> class for changing text color, <code>.zbz-bg-*</code> for changing background color and <code>.zbz-border-*</code> class for changing border color.</p>
+				<p>Here is an example:</p>
+<pre>
+&lt;div class=<span style="color:#00a33f">"zbz-bg-amber zbz-color-white"</span>>Coloring sample.&lt;/div>
+</pre>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong class="zbz-color-concrete">Result:</strong>
+					</div>
+					<div class="panel-body">
+						<div class="zbz-bg-amber zbz-color-white">Coloring sample.</div>
+					</div>
+				</div>
+				<p>You can find the colors and class names in the table below.</p>
+				<div class="row" style="margin: 0px;">
+					<div class="col-sm-3 color-preview zbz-bg-amber"><div>zbz-bg-amber</div> <div>zbz-border-amber</div> <div>zbz-color-amber</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-pumpkin"><div>zbz-bg-pumpkin</div> <div>zbz-border-pumpkin</div> <div>zbz-color-pumpkin</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-pomegranate"><div>zbz-bg-pomegranate</div> <div>zbz-border-pomegranate</div> <div>zbz-color-pomegranate</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-raspberry"><div>zbz-bg-raspberry</div> <div>zbz-border-raspberry</div> <div>zbz-color-raspberry</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-fuchsias"><div>zbz-bg-fuchsias</div> <div>zbz-border-fuchsias</div> <div>zbz-color-fuchsias</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-amethyst"><div>zbz-bg-amethyst</div> <div>zbz-border-amethyst</div> <div>zbz-color-amethyst</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-sky-blue"><div>zbz-bg-sky-blue</div> <div>zbz-border-sky-blue</div> <div>zbz-color-sky-blue</div></div>
+					<div class="col-sm-3 color-preview dark zbz-bg-deep-blue"><div>zbz-bg-deep-blue</div> <div>zbz-border-deep-blue</div> <div>zbz-color-deep-blue</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-sea"><div>zbz-bg-sea</div> <div>zbz-border-sea</div> <div>zbz-color-sea</div></div>
+					<div class="col-sm-3 color-preview dark zbz-bg-cobalt"><div>zbz-bg-cobalt</div> <div>zbz-border-cobalt</div> <div>zbz-color-cobalt</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-grass"><div>zbz-bg-grass</div> <div>zbz-border-grass</div> <div>zbz-color-grass</div></div>
+					<div class="col-sm-3 color-preview dark zbz-bg-eggplant"><div>zbz-bg-eggplant</div> <div>zbz-border-eggplant</div> <div>zbz-color-eggplant</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-white"><div>zbz-bg-white</div> <div>zbz-border-white</div> <div>zbz-color-white</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-snow"><div>zbz-bg-snow</div> <div>zbz-border-snow</div> <div>zbz-color-snow</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-clouds"><div>zbz-bg-clouds</div> <div>zbz-border-clouds</div> <div>zbz-color-clouds</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-silver"><div>zbz-bg-silver</div> <div>zbz-border-silver</div> <div>zbz-color-silver</div></div>
+					<div class="col-sm-3 color-preview zbz-bg-concrete"><div>zbz-bg-concrete</div> <div>zbz-border-concrete</div> <div>zbz-color-concrete</div></div>
+					<div class="col-sm-3 color-preview dark zbz-bg-asbestos"><div>zbz-bg-asbestos</div> <div>zbz-border-asbestos</div> <div>zbz-color-asbestos</div></div>
+					<div class="col-sm-3 color-preview dark zbz-bg-asphalt"><div>zbz-bg-asphalt</div> <div>zbz-border-asphalt</div> <div>zbz-color-asphalt</div></div>
+					<div class="col-sm-3 color-preview dark zbz-bg-onyx"><div>zbz-bg-onyx</div> <div>zbz-border-onyx</div> <div>zbz-color-onyx</div></div>
+				</div>
+			</div>
+			<div id="slides" class="section">
+				<h2>Creating slides</h2>
+				<p>As you've already noticed the layout of <strong>Zbz! Spash</strong> consists of a several slides with animated transitions between them. Although the animations are created automatically, you still have to follow the basic pattern of HTML markup to make it work.</p>
+<pre><span style="color:#919191">&lt;!-- Slide keeper --></span>
+&lt;div class=<span style="color:#00a33f">"zbz-slide-keeper"</span> >
+
+    <span style="color:#919191">&lt;!-- First slide --></span>
+    &lt;section class=<span style="color:#00a33f">"zbz-slide"</span> data-nav=<span style="color:#00a33f">"Home"</span>>
+        &lt;div class=<span style="color:#00a33f">"zbz-slide-inner"</span>>
+            &lt;div class=<span style="color:#00a33f">"zbz-slide-content zbz-on-top"</span>>
+            
+                <span style="color:#919191">&lt;!-- Your content here --></span>
+                
+            &lt;/div><span style="color:#919191">&lt;!-- /.slide-content --></span>
+        &lt;/div><span style="color:#919191">&lt;!-- /.slide-inner --></span>
+    &lt;/section>
+    
+    <span style="color:#919191">&lt;!-- Second slide --></span>
+    &lt;section class=<span style="color:#00a33f">"zbz-slide"</span> data-nav=<span style="color:#00a33f">"Second slide"</span>>
+        &lt;div class=<span style="color:#00a33f">"zbz-slide-inner"</span>>
+            &lt;div class=<span style="color:#00a33f">"zbz-slide-content zbz-on-top"</span>>
+            
+                <span style="color:#919191">&lt;!-- Your content here --></span>
+                
+            &lt;/div><span style="color:#919191">&lt;!-- /.slide-content --></span>
+        &lt;/div><span style="color:#919191">&lt;!-- /.slide-inner --></span>
+    &lt;/section>
+
+&lt;/div><span style="color:#919191">&lt;!-- /.slide-keeper --></span>
+</pre>
+
+				<p>There are a few basic elements. <code>&lt;section class="zbz-slide" /></code> is an element which contains every screen of a webpage. All slides are wrapped in <code>&lt;div class="zbz-slide-keeper" /></code> element. In fact this is a general structure that should be kept untouched. But there are a few more elements that helps your website to look better. <code>&lt;div class="zbz-slide-inner" /></code> and <code>&lt;div class="zbz-slide-content" /></code> elements are responsible for keeping the content vertically aligned in the center of the screen.</p>
+			</div>			
+			<div id="navigation" class="section">
+				<h2>Navigation</h2>
+				<p>As you've noticed that each <code>&lt;section class="zbz-slide" /></code> has a <code>data-nav</code> attribute. The value of this attribute would be used as a name of the slide in page navigation. In order to create the navigation (I'm talking about those bullets on the right side of a page) all you have to do is to set those attributes for your slides and it would be created automatically.</p>
+<pre>&lt;section class=<span style="color:#00a33f">"zbz-slide"</span> data-nav=<span style="color:#00a33f">"<strong>Slide title</strong>"</span>>
+    <span style="color:#919191">&lt;!-- Slide content --></span>
+&lt;/section>
+</pre>
+				<p>If you don't want a specific slide to be in the navigation simply remove the attribute for this slide.</p>
+<pre>&lt;section class=<span style="color:#00a33f">"zbz-slide"</span>>
+    <span style="color:#919191">&lt;!-- Slide content --></span>
+&lt;/section>
+</pre>
+			</div>
+			<div id="feature" class="section">
+				<h2>Feature boxes</h2>
+				<p>The template includes styles what we call a "feature box". Basically this is a page element which includes an image (or an icon) and description. What's so cool about it? You can use it in a lot of situations.</p>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong class="zbz-color-concrete">Here are a few examples:</strong>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="zbz-feature-side zbz-sm-3x">
+									<div class="zbz-circle">
+										<i class="fa fa-rocket"></i>
+									</div>
+									<div class="zbz-description">
+										<h3>Icon in a circle</h3>
+										<p>Vestibulum lacus augue, feugiat in rhoncus sed, mollis vel nibh. Fusce placerat erat vitae est varius, at gravida dolor mattis.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="zbz-feature-side zbz-sm-3x">
+									<i class="fa fa-rocket"></i>
+									<div class="zbz-description">
+										<h3>Icon without circle</h3>
+										<p>Vestibulum lacus augue, feugiat in rhoncus sed, mollis vel nibh. Fusce placerat erat vitae est varius, at gravida dolor mattis.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr />
+						<div class="row">
+							<div class="col-md-6">
+								<div class="zbz-feature-side zbz-sm-1x">
+									<div class="zbz-circle">
+										<i class="fa fa-phone"></i>
+									</div>
+									<div class="zbz-description lead">
+										1 800 200 600
+									</div>
+								</div>
+								<div class="zbz-feature-side zbz-sm-1x">
+									<div class="zbz-circle">
+										<i class="fa fa-map-marker"></i>
+									</div>
+									<div class="zbz-description">
+										121 King Street,<br/>Melbourne, Victoria<br/>3000 Australia
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="zbz-feature-side zbz-sm-1x">
+									<i class="fa fa-bomb"></i>
+									<div class="zbz-description">First item</div>
+								</div>
+								<div class="zbz-feature-side zbz-sm-1x">
+									<i class="fa fa-desktop"></i>
+									<div class="zbz-description">Second item</div>
+								</div>
+								<div class="zbz-feature-side zbz-sm-1x">
+									<i class="fa fa-coffee"></i>
+									<div class="zbz-description">Third item</div>
+								</div>
+							</div>
+						</div>
+						<hr />
+						<div class="zbz-feature-side zbz-sm-6x">
+							<div class="zbz-circle zbz-bg-silver">
+								<span style="background-image: url(assets/images/sample-image.jpg)" class="zbz-image-cover" />
+							</div>
+							<div class="zbz-description">
+								<h1>Image in a circle</h1>
+								<p>Fusce pharetra sem non mauris auctor dapibus id ac enim. Mauris justo felis, lacinia vitae lectus sed, adipiscing scelerisque nisi. Vestibulum lacus augue, feugiat in rhoncus sed, mollis vel nibh. Fusce placerat erat vitae est varius, at gravida dolor mattis. Aenean vestibulum nisl vitae tincidunt ultricies. Fusce placerat erat vitae est varius, at gravida dolor mattis.</p>
+								<p>Mauris justo felis, lacinia vitae lectus sed, adipiscing scelerisque nisi. Vestibulum lacus augue, feugiat in rhoncus sed, mollis vel nibh.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>I think you've got the main idea. Let's learn how to create those boxes:</p>
+<pre><span style="color:#919191">&lt;!-- Feature box with an FontAwesome icon in a circle --></span>
+&lt;div class=<span style="color:#00a33f">"zbz-feature-side zbz-sm-2x"</span>>
+
+    <span style="color:#919191">&lt;!-- Icon in a circle --></span>
+    &lt;div class=<span style="color:#00a33f">"zbz-circle"</span>>
+        <span style="color:#919191">&lt;!-- FontAwesome Icon --></span>
+        &lt;i class=<span style="color:#00a33f">"fa fa-phone"</span>>&lt;/i>
+    &lt;/div>
+    
+    <span style="color:#919191">&lt;!-- Description --></span>
+    &lt;div class=<span style="color:#00a33f">"zbz-description"</span>>
+        <span style="color:#919191">&lt;!-- Your text here --></span>
+    &lt;/div>
+&lt;/div>
+
+
+<span style="color:#919191">&lt;!-- Feature box with a plain FontAwesome icon --></span>
+&lt;div class=<span style="color:#00a33f">"zbz-feature-side zbz-sm-3x"</span>>
+
+    <span style="color:#919191">&lt;!-- FontAwesome Icon --></span>
+    &lt;i class=<span style="color:#00a33f">"fa fa-phone"</span>>&lt;/i>
+    
+    <span style="color:#919191">&lt;!-- Description --></span>
+    &lt;div class=<span style="color:#00a33f">"zbz-description"</span>>
+        <span style="color:#919191">&lt;!-- Your text here --></span>
+    &lt;/div>
+&lt;/div>
+
+
+<span style="color:#919191">&lt;!-- Feature box with an image --></span>
+&lt;div class=<span style="color:#00a33f">"zbz-feature-side zbz-sm-5x"</span>>
+
+    <span style="color:#919191">&lt;!-- Image in a circle --></span>
+    &lt;div class=<span style="color:#00a33f">"zbz-circle"</span>>
+        <span style="color:#919191">&lt;!--
+             Set image as a background for
+             an element with '.zbz-image-cover' class
+        --></span>
+        &lt;div style=<span style="color:#00a33f">"background-image: url(path/to/image.jpg)"</span> class=<span style="color:#00a33f">"zbz-image-cover"</span>>&lt;/div>
+    &lt;/div>
+    
+    <span style="color:#919191">&lt;!-- Description --></span>
+    &lt;div class=<span style="color:#00a33f">"zbz-description"</span>>
+        <span style="color:#919191">&lt;!-- Your text here --></span>
+    &lt;/div>
+&lt;/div>
+</pre>
+				<p>Classes with names like <code>zbz-sm-4x</code> represents the size of an image or icon. And the cool thing about them is that they are responsive. Learn more in <a href="#responsive">Responsiveness</a> chapter</p>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Size</th>
+							<th>Phone</th>
+							<th>Tablets</th>
+							<th>Medium devices</th>
+							<th>Large desktop</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>1x</td>
+						<td><code>.zbz-xs-1x</code></td>
+						<td><code>.zbz-sm-1x</code></td>
+						<td><code>.zbz-md-1x</code></td>
+						<td><code>.zbz-lg-1x</code></td>
+					</tr>
+					<tr>
+						<td>2x</td>
+						<td><code>.zbz-xs-2x</code></td>
+						<td><code>.zbz-sm-2x</code></td>
+						<td><code>.zbz-md-2x</code></td>
+						<td><code>.zbz-lg-2x</code></td>
+					</tr>
+					<tr>
+						<td>3x</td>
+						<td><code>.zbz-xs-3x</code></td>
+						<td><code>.zbz-sm-3x</code></td>
+						<td><code>.zbz-md-3x</code></td>
+						<td><code>.zbz-lg-3x</code></td>
+					</tr>
+					<tr>
+						<td>4x</td>
+						<td><code>.zbz-xs-4x</code></td>
+						<td><code>.zbz-sm-4x</code></td>
+						<td><code>.zbz-md-4x</code></td>
+						<td><code>.zbz-lg-4x</code></td>
+					</tr>
+					<tr>
+						<td>5x</td>
+						<td><code>.zbz-xs-5x</code></td>
+						<td><code>.zbz-sm-5x</code></td>
+						<td><code>.zbz-md-5x</code></td>
+						<td><code>.zbz-lg-5x</code></td>
+					</tr>
+					<tr>
+						<td>6x</td>
+						<td><code>.zbz-xs-6x</code></td>
+						<td><code>.zbz-sm-6x</code></td>
+						<td><code>.zbz-md-6x</code></td>
+						<td><code>.zbz-lg-6x</code></td>
+					</tr>
+					<tr>
+						<td>7x</td>
+						<td><code>.zbz-xs-7x</code></td>
+						<td><code>.zbz-sm-7x</code></td>
+						<td><code>.zbz-md-7x</code></td>
+						<td><code>.zbz-lg-7x</code></td>
+					</tr>
+					<tr>
+						<td>8x</td>
+						<td><code>.zbz-xs-8x</code></td>
+						<td><code>.zbz-sm-8x</code></td>
+						<td><code>.zbz-md-8x</code></td>
+						<td><code>.zbz-lg-8x</code></td>
+					</tr>
+					<tr>
+						<td>9x</td>
+						<td><code>.zbz-xs-9x</code></td>
+						<td><code>.zbz-sm-9x</code></td>
+						<td><code>.zbz-md-9x</code></td>
+						<td><code>.zbz-lg-9x</code></td>
+					</tr>
+					<tr>
+						<td>10x</td>
+						<td><code>.zbz-xs-10x</code></td>
+						<td><code>.zbz-sm-10x</code></td>
+						<td><code>.zbz-md-10x</code></td>
+						<td><code>.zbz-lg-10x</code></td>
+					</tr>
+
+
+				</table>
+			</div>
+			<div id="responsive" class="section">
+				<h2>Responsiveness</h2>
+				<p>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options.</p>
+				<div class="alert alert-info">
+					You can find more information about working with Bootstrap grid system in <a href="http://getbootstrap.com/css/#grid"><strong>documentation</strong></a>.
+				</div>
+				<p><strong>Zbz! Splash</strong> follows the same principles and provides classes for setting feature boxes sizes targeted to different viewport sizes.</p>
+				<p>Scaling classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override scaling classes targeted at smaller devices. Therefore, applying any <code>.zbz-md-</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.zbz-lg-</code> class is not present.</p>
+				<p>Additionaly <strong>Zbz! Splash</strong> disables animations for small and extra small viewports to increase the speed of page rendering.</p>
+			</div>
+			<div id="transitions" class="section">
+				<h2>Transitions between the screens</h2>
+				<p>On scroll animations with the circles and appearance of content parts are created automatically. The only thing you have to do is to tell the script which elements of the page should be those flying elements and how should the other parts appear and disappear.</p>
+				<h3>Flying circles</h3>
+				<p>Let's say you design a slide with some text and a feature box. And you want an icon of that feature box to be the one of those circles flying over the screen. All you have to do is to set an attribute <code>data-role="zbz-flying"</code> to an element that you want to take place in animation. You should also wrap the content of <code>.zbz-circle</code> in a <code>.zbz-inner</code> to make it disappear when current slide is inactive. So your code would look like this:</p>
+<pre><span style="color:#919191">&lt;!-- This is your slide --></span>
+&lt;section class=<span style="color:#00a33f">"zbz-slide"</span>>
+    &lt;div class=<span style="color:#00a33f">"zbz-slide-inner"</span>>
+        &lt;div class=<span style="color:#00a33f">"zbz-slide-content"</span>>
+        
+            <span style="color:#919191">&lt;!-- Feature box --></span>
+            &lt;div class=<span style="color:#00a33f">"zbz-feature-side zbz-xs-2x"</span>>
+            
+                <span style="color:#919191">&lt;!--
+                    Add data-role="zbz-flying" attribute
+                    to make this circle animated
+                --></span>
+                &lt;div class=<span style="color:#00a33f">"zbz-circle"</span> <strong>data-role=<span style="color:#00a33f">"zbz-flying"</span></strong>>
+                    <span style="color:#919191">&lt;!--
+                        Wrap the content of .zbz-circle in a .zbz-inner
+                        to make it disappear when current slide is inactive
+                    --></span>
+                    &lt;div <strong>class=<span style="color:#00a33f">"zbz-inner"</span></strong>>
+                        &lt;i class=<span style="color:#00a33f">"fa fa-rocket"</span>>&lt;/i>
+                    &lt;/div>
+                &lt;/div>
+                
+                <span style="color:#919191">&lt;!-- Description --></span>
+                &lt;div class=<span style="color:#00a33f">"zbz-description"</span>>
+                    <span style="color:#919191">The description goes here.</span>
+                &lt;/div>
+            &lt;/div>
+
+        &lt;/div>
+    &lt;/div>
+&lt;/section>
+</pre>
+				<h3>Appearing and disappearing of content</h3>
+				<p>Now the circle beautifully flies in and out but the description stays untouched. To change that you should set <code>data-appear</code> and <code>data-disappear</code> attributes for <code>&lt;div class="description"></code> as long as for other visible elements of the slide. There is also an optional <code>data-delay</code> attribute which is responsible for delay in the appear and disappear transitions.</p>
+				<p>Here is how it looks in the code:</p>
+<pre><span style="color:#919191">&lt;!-- This is your slide --></span>
+&lt;section class=<span style="color:#00a33f">"zbz-slide"</span>>
+    &lt;div class=<span style="color:#00a33f">"zbz-slide-inner"</span>>
+        &lt;div class=<span style="color:#00a33f">"zbz-slide-content"</span>>
+        
+            <span style="color:#919191">&lt;!-- Feature box --></span>
+            &lt;div class=<span style="color:#00a33f">"zbz-feature-side zbz-xs-2x"</span>>
+                &lt;div class=<span style="color:#00a33f">"zbz-circle"</span> <strong>data-role=<span style="color:#00a33f">"zbz-flying"</span></strong>>
+                    &lt;div <strong>class=<span style="color:#00a33f">"zbz-inner"</span></strong>>
+                        &lt;i class=<span style="color:#00a33f">"fa fa-rocket"</span>>&lt;/i>
+                    &lt;/div>
+                &lt;/div>
+                
+                <span style="color:#919191">&lt;!--
+                    Add data-appear and data-disappear attributes
+                    to make an element nicely appear and disappear
+                --></span>
+                &lt;div class=<span style="color:#00a33f">"zbz-description"</span> data-appear=<span style="color:#00a33f">"slideInUp"</span> data-disappear=<span style="color:#00a33f">"slideOutUp"</span> data-delay=<span style="color:#00a33f">"10"</span>>
+                    <span style="color:#919191">The description goes here.</span>
+                &lt;/div>
+            &lt;/div>
+
+        &lt;/div>
+    &lt;/div>
+&lt;/section>
+</pre>
+				<p>Here is a table of available appearing and disappearing effects:</p>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Appear</th>
+							<th>Disappear</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tr>
+						<td><code>fadeIn</code></td>
+						<td><code>fadeOut</code></td>
+						<td>Fading</td>
+					</tr>
+					<tr>
+						<td><code>slideInUp</code></td>
+						<td><code>slideOutUp</code></td>
+						<td>Slide from down to up</td>
+					</tr>
+					<tr>
+						<td><code>slideInDown</code></td>
+						<td><code>slideOutDown</code></td>
+						<td>Slide from up to down</td>
+					</tr>
+					<tr>
+						<td><code>slideInLeft</code></td>
+						<td><code>slideOutLeft</code></td>
+						<td>Slide from right to left</td>
+					</tr>
+					<tr>
+						<td><code>slideInRight</code></td>
+						<td><code>slideOutRight</code></td>
+						<td>Slide from left to right</td>
+					</tr>
+					<tr>
+						<td><code>scrollIn</code></td>
+						<td><code>scrollOut</code></td>
+						<td>Scroll normally</td>
+					</tr>
+				</table>
+			</div>
+			<div id="edit-less" class="section">
+				<h2>CSS/LESS Structure</h2>
+				<p>This template's CSS is built on <a href="http://lesscss.org">LESS</a>, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS. So the best way to make changes in styles is to edit LESS files in <strong>/assets/less/</strong> folder.</p>
+				<p>The template has Bootstrap 3 framework in it's core, which means that if you are familiar with it then you know how to customize it. If you are not, then you can find a complete documentation on <a href="http://getbootstrap.com">Bootstrap 3 framework website</a>.</p>
+				<p>Also there are some custom classes included. You can find them in <strong>/assets/less/custom/</strong> folder.</p>
+				<h3>Which files to compile?</h3>
+				<p>The main files for compilation are <strong>bootstrap-<em class="text-muted">[color-scheme]</em>.less</strong> in <strong>/assets/less/</strong>. After making changes in any file that is imported to main file you should compile it to <strong>bootstrap-<em class="text-muted">[color-scheme]</em>.css</strong> in <strong>/assets/css/</strong>.</p>
+				<div class="alert alert-info">Please note that for each color scheme there is a separate <strong>bootstrap-*.less</strong> LESS file which imports the specific <strong>zbz-color-scheme-*.less</strong> file.</div>
+				<h3>Compilers</h3>
+				<p>You can <a href="http://google.com?q=less+precompiler">find</a> a lot of LESS precomplires online. Here is a few just to save your time:</p>
+				<hr />
+				<h4><a href="http://incident57.com/less/">LESS.app</a> <small>for OSx</small></h4>
+				<p>LESS.app is a simple lightweight app that simply does what is was designed for — it compiles LESS files. It's simple and easy to work with.</p>
+				<hr />
+				<h4><a href="http://incident57.com/less/">Prepros App</a> <small>for Windows</small></h4>
+				<p>Preprocessing, Live Browser Refreshing, Multi Device Testing and Much More.</p>
+			</div>
+			<div id="contact-form" class="section">
+				<h2>Contact form</h2>
+				<p>This template comes with a working AJAX contact form. It includes three major components:</p>
+				<ol>
+					<li>JavaScript which handles form submission and processing the response from server <strong>/assets/js/zbz-feedback.js</strong></li>
+					<li>PHP script which handles AJAX request from the client and sends an email <strong>/feedback.php</strong></li>
+					<li>Swift Mailer library in <strong>/assets/libs/SwiftMailer/</strong></li>
+				</ol>
+				<h3>Setting things up</h3>
+				<p>Make sure that JavaScript file is included in your HTML:</p>
+				<pre>&lt;script type=<span style="color:#00a33f">"text/javascript"</span> src=<span style="color:#00a33f">"assets/js/zbz-feedback.js"</span>>&lt;/script></pre>
+				<p>It is also important to set right attributes for your form. First of all it should have a <code>data-role="zbz-feedback"</code> attribute to make it detectable by JavaScript. It should also have a <code>zbz-feedback-form</code> class applied for the right styling. And <code>action</code> attribute should point to a PHP script (normally <code>action="feedback.php"</code> if you don't rename it).</p>
+				<pre>&lt;form class=<span style="color:#00a33f">"form zbz-feedback-form"</span> role=<span style="color:#00a33f">"form"</span> data-role=<span style="color:#00a33f">"zbz-feedback"</span> method=<span style="color:#00a33f">"POST"</span> action=<span style="color:#00a33f">"feedback.php"</span>></pre>
+				<p>Now you have to adjust a few parameters in <strong>/feedback.php</strong>. Set the recipient's (yours) e-mail address and name. Subject and message  'before' and 'after' parts. Choose the type of transport and provide transport specific settings. Here is an example for sending e-mails using your gmail account:</p>
+<pre>
+<span style="color:#919191">// Recipient e-mail</span>
+$TO_EMAIL <span style="color:#ff5600">=</span> <span style="color:#00a33f">'youremail@gmail.com'</span>;
+
+<span style="color:#919191">// Recipient name</span>
+$TO_NAME <span style="color:#ff5600">=</span> <span style="color:#00a33f">'Your Name'</span>;
+
+<span style="color:#919191">// Subject</span>
+$SUBJECT <span style="color:#ff5600">=</span> <span style="color:#00a33f">'Message from yoursite.com'</span>;
+
+<span style="color:#919191">// Body before</span>
+$BODY_BEFORE <span style="color:#ff5600">=</span> <span style="color:#00a33f">'&lt;p>You have a message:&lt;/p>&lt;hr/>'</span>;
+
+<span style="color:#919191">// Body after</span>
+$BODY_AFTER <span style="color:#ff5600">=</span> <span style="color:#00a33f">'&lt;hr/>&lt;p>This message was sent via contact form on your site.&lt;/p>'</span>;
+
+<span style="color:#919191">// Transport (available transports are: 'smtp', 'sendmail' and 'mail')</span>
+$TRANSPORT <span style="color:#ff5600">=</span> <span style="color:#00a33f">'smtp'</span>;
+
+
+<span style="color:#919191">// SMTP Settings</span>
+
+<span style="color:#919191">// SMTP host</span>
+$SMTP_HOST <span style="color:#ff5600">=</span> <span style="color:#00a33f">'tls://smtp.gmail.com'</span>;
+
+<span style="color:#919191">// SMTP port</span>
+$SMTP_PORT <span style="color:#ff5600">=</span> 465;
+
+<span style="color:#919191">// SMTP username</span>
+$SMTP_USERNAME <span style="color:#ff5600">=</span> <span style="color:#00a33f">'youremail@gmail.com'</span>;
+
+<span style="color:#919191">// SMTP password</span>
+$SMTP_PASSWORD <span style="color:#ff5600">=</span> <span style="color:#00a33f">'Y0urPa55w0rd'</span>;
+
+
+<span style="color:#919191">// Sendmail settings</span>
+
+<span style="color:#919191">// Linux command to run Sendmail</span>
+$SENDMAIL_RUN <span style="color:#ff5600">=</span> <span style="color:#00a33f">'/usr/sbin/sendmail -bs'</span>;
+</pre>				
+			</div>
+
+			<div id="credits" class="section">
+				<h2>Credits</h2>
+				<p>This is the list of third-party libraries, fonts and other assets used in the template.</p>
+				<h3>HTML/CSS</h3>
+				<ul>
+					<li><a href="http://getbootstrap.com"><strong>Boostrap 3</strong></a> — The most popular HTML, CSS, and JS framework</li>
+					<li><a href="http://daneden.github.io/animate.css/"><strong>Animate.css</strong></a> — Just-add-water CSS animations</li>
+				</ul>
+				<h3>JavaScripts</h3>
+				<ul>
+					<li>
+						<a href="http://jquery.com"><strong>jQuery</strong></a> — JavaScript framework.
+					</li>
+					<li>
+						<a href="http://fotorama.io"><strong>Fotorama</strong></a> — JavaScript gallery.
+					</li>
+					<li>
+						<a href="https://github.com/Prinzhorn/skrollr"><strong>Skrollr</strong></a> — full-fledged scrolling animation library.
+					</li>
+					<li>
+						<a href="https://github.com/mike-zarandona/prettyembed.js"><strong>PrettyEmbed.js</strong></a> — Prettier embeds for your YouTubes.
+					</li>
+					<li>
+						<a href="http://fitvidsjs.com"><strong>FitVids.js</strong></a> — A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
+					</li>
+					<li>
+						<a href="http://fitvidsjs.com"><strong>Pace</strong></a> — Automatic page load progress bar.
+					</li>
+				</ul>
+				<h3>PHP</h3>
+				<ul>
+					<li><a href="http://http://swiftmailer.org"><strong>Swift Mailer</strong></a> offers a flexible and elegant object-oriented approach to sending emails with a multitude of features.</li>
+				</ul>
+			</div>
+			<hr/>
+			<p class="lead">Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+		</div>
+	</div>
+</body>
+</html>

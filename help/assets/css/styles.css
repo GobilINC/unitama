@@ -1,0 +1,284 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #EBEBEB;
+	font-family: "Open Sans", serif;
+}
+
+.logo {
+	margin: 35px 25px 0px;
+	float: right;
+}
+
+.section {
+	padding: 5px 0px;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+p {
+	margin: 20px 0px;
+}
+
+.credits {
+	margin: 30px 0px 0px;
+}
+
+.navigation {
+	width: 220px;
+	background-color: #454d54;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 2;
+}
+
+.navigation .nav {
+	margin-top: 170px;
+	text-align: right;
+}
+.navigation .nav li {
+}
+
+.navigation .nav li a {
+	padding: 10px 25px;
+}
+.navigation .nav li a:link,
+.navigation .nav li a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.navigation .nav li a:hover,
+.navigation .nav li a:active {
+	background-color: #282e33;
+	text-decoration: none;
+	color: #FFF;
+}
+
+.navigation .nav li.active a {
+	background-color: #34383c;
+	color: #5f686f;
+}
+
+
+.contents {
+	padding-left: 220px;
+	width: 1000px;
+	background-color: #FFF;
+	min-height: 100%;
+	position: absolute;
+}
+
+.wrap {
+	padding: 30px 50px;
+}
+
+.color-preview {
+	padding: 20px 0px;
+	font-size: 10px;
+	color: rgba(0,0,0,0.5);
+	text-align: center;
+
+}
+
+.color-preview.dark {
+	color: rgba(255,255,255,0.5);
+}
+
+
+/*
+	Zbz! Palletes
+*/
+.zbz-bg-amber {
+  background-color: #f0a131 !important;
+}
+.zbz-bg-pumpkin {
+  background-color: #e16911 !important;
+}
+.zbz-bg-pomegranate {
+  background-color: #c72e21 !important;
+}
+.zbz-bg-raspberry {
+  background-color: #c74c74 !important;
+}
+.zbz-bg-fuchsias {
+  background-color: #a74e97 !important;
+}
+.zbz-bg-amethyst {
+  background-color: #9855ab !important;
+}
+.zbz-bg-sky-blue {
+  background-color: #30b8f1 !important;
+}
+.zbz-bg-deep-blue {
+  background-color: #3b70ab !important;
+}
+.zbz-bg-sea {
+  background-color: #0ca0a5 !important;
+}
+.zbz-bg-cobalt {
+  background-color: #295bcf !important;
+}
+.zbz-bg-grass {
+  background-color: #75a21e !important;
+}
+.zbz-bg-eggplant {
+  background-color: #4c375c !important;
+}
+.zbz-bg-white {
+  background-color: #ffffff !important;
+}
+.zbz-bg-snow {
+  background-color: #f2f5f8 !important;
+}
+.zbz-bg-clouds {
+  background-color: #e9eef1 !important;
+}
+.zbz-bg-silver {
+  background-color: #cccfd5 !important;
+}
+.zbz-bg-concrete {
+  background-color: #979fa7 !important;
+}
+.zbz-bg-asbestos {
+  background-color: #686a73 !important;
+}
+.zbz-bg-asphalt {
+  background-color: #404249 !important;
+}
+.zbz-bg-onyx {
+  background-color: #2b2e35 !important;
+}
+.zbz-bg-brand {
+  background-color: #30b8f1 !important;
+}
+.zbz-border-amber {
+  border-color: #f0a131 !important;
+}
+.zbz-border-pumpkin {
+  border-color: #e16911 !important;
+}
+.zbz-border-pomegranate {
+  border-color: #c72e21 !important;
+}
+.zbz-border-raspberry {
+  border-color: #c74c74 !important;
+}
+.zbz-border-fuchsias {
+  border-color: #a74e97 !important;
+}
+.zbz-border-amethyst {
+  border-color: #9855ab !important;
+}
+.zbz-border-sky-blue {
+  border-color: #30b8f1 !important;
+}
+.zbz-border-deep-blue {
+  border-color: #3b70ab !important;
+}
+.zbz-border-sea {
+  border-color: #0ca0a5 !important;
+}
+.zbz-border-cobalt {
+  border-color: #295bcf !important;
+}
+.zbz-border-grass {
+  border-color: #75a21e !important;
+}
+.zbz-border-eggplant {
+  border-color: #4c375c !important;
+}
+.zbz-border-white {
+  border-color: #ffffff !important;
+}
+.zbz-border-snow {
+  border-color: #f2f5f8 !important;
+}
+.zbz-border-clouds {
+  border-color: #e9eef1 !important;
+}
+.zbz-border-silver {
+  border-color: #cccfd5 !important;
+}
+.zbz-border-concrete {
+  border-color: #979fa7 !important;
+}
+.zbz-border-asbestos {
+  border-color: #686a73 !important;
+}
+.zbz-border-asphalt {
+  border-color: #404249 !important;
+}
+.zbz-border-onyx {
+  border-color: #2b2e35 !important;
+}
+.zbz-border-brand {
+  border-color: #30b8f1 !important;
+}
+.zbz-color-amber {
+  color: #f0a131 !important;
+}
+.zbz-color-pumpkin {
+  color: #e16911 !important;
+}
+.zbz-color-pomegranate {
+  color: #c72e21 !important;
+}
+.zbz-color-raspberry {
+  color: #c74c74 !important;
+}
+.zbz-color-fuchsias {
+  color: #a74e97 !important;
+}
+.zbz-color-amethyst {
+  color: #9855ab !important;
+}
+.zbz-color-sky-blue {
+  color: #30b8f1 !important;
+}
+.zbz-color-deep-blue {
+  color: #3b70ab !important;
+}
+.zbz-color-sea {
+  color: #0ca0a5 !important;
+}
+.zbz-color-cobalt {
+  color: #295bcf !important;
+}
+.zbz-color-grass {
+  color: #75a21e !important;
+}
+.zbz-color-eggplant {
+  color: #4c375c !important;
+}
+.zbz-color-white {
+  color: #ffffff !important;
+}
+.zbz-color-snow {
+  color: #f2f5f8 !important;
+}
+.zbz-color-clouds {
+  color: #e9eef1 !important;
+}
+.zbz-color-silver {
+  color: #cccfd5 !important;
+}
+.zbz-color-concrete {
+  color: #979fa7 !important;
+}
+.zbz-color-asbestos {
+  color: #686a73 !important;
+}
+.zbz-color-asphalt {
+  color: #404249 !important;
+}
+.zbz-color-onyx {
+  color: #2b2e35 !important;
+}
+.zbz-color-brand {
+  color: #30b8f1 !important;
+}
