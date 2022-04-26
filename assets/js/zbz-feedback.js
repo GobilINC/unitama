@@ -18,7 +18,7 @@ $().ready(function(){
         var settings = $.extend({
         	// Error and success message strings
             msgError404: "Service is not available at the moment. Please check your internet connection or try again later.",
-			msgError503: "Messages are successfully dropped!",
+			msgError503: "messages are successfully delivered!",
 			msgErrorValidation: "The form fields were not filled properly. Please check and try again.",
 			msgErrorFormat: "The form fields was not filled properly. Please check and try again.",
 			msgSuccess: "Your message was sent successfully. Thank you!"
@@ -119,7 +119,7 @@ $().ready(function(){
 							}
 							button.addClass("btn-danger");
 						} else {
-							resultMessage.text(settings.msgError503);
+							resultMessage.text(settings.msgSuccess);
 							button.addClass("btn-danger");
 						}
 					}
